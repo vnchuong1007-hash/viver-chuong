@@ -207,7 +207,7 @@ body.red{
 }
 
 .dark-section .workshop-card {
-  background: #ffffff !important;
+  background: #ffffff !important;}
   
   #authModal{
   position: fixed !important;
@@ -262,4 +262,118 @@ body.red{
   padding:12px 14px !important;
   margin-bottom:12px !important;
   border-radius:12px !important;
+}
+.auth-modal{
+  position:fixed;
+  inset:0;
+  z-index:99999;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.auth-modal.is-hidden{
+  display:none !important;
+}
+
+.auth-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(5,15,35,.68);
+  backdrop-filter:blur(7px);
+}
+
+.auth-popup-small{
+  position:relative;
+  z-index:2;
+  width:min(430px,92%);
+  max-height:88vh;
+  overflow-y:auto;
+  background:#fff;
+  border-radius:24px;
+  padding:28px;
+  box-shadow:0 30px 90px rgba(0,0,0,.3);
+}
+
+.auth-brand{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.auth-brand .logo-mark{
+  margin:0 auto 8px;
+}
+
+.auth-brand h2{
+  font-size:30px;
+  color:#165DFF;
+  margin-bottom:3px;
+}
+
+.auth-brand p{
+  color:#64748B;
+  font-size:14px;
+}
+
+.auth-tabs{
+  display:flex;
+  margin-bottom:22px;
+  border-bottom:1px solid #E2E8F0;
+}
+
+.auth-tab{
+  flex:1;
+  border:0;
+  background:transparent;
+  padding:11px 5px;
+  color:#64748B;
+  font-size:13px;
+  font-weight:700;
+  cursor:pointer;
+  border-bottom:3px solid transparent;
+}
+
+.auth-tab.active{
+  color:#165DFF;
+  border-bottom-color:#165DFF;
+}
+
+.auth-panel{
+  display:none;
+}
+
+.auth-panel.active{
+  display:block;
+}
+
+.auth-panel input{
+  width:100%;
+  padding:13px 15px;
+  border:1px solid #CBD5E1;
+  border-radius:13px;
+  margin-bottom:12px;
+  outline:none;
+}
+
+.auth-panel input:focus{
+  border-color:#165DFF;
+  box-shadow:0 0 0 4px rgba(22,93,255,.1);
+}
+
+.auth-panel .btn{
+  margin-bottom:10px;
+}
+
+.close-auth{
+  position:absolute;
+  top:12px;
+  right:12px;
+  width:36px;
+  height:36px;
+  border:0;
+  border-radius:50%;
+  background:#EF4444;
+  color:white;
+  font-size:22px;
+  cursor:pointer;
 }

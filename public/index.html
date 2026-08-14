@@ -47,7 +47,7 @@
       <div class="container hero-grid">
         <div class="hero-content">
           <p class="eyebrow">EDTECH • AI • INNOVATION HUB</p>
-          <h1>Learn, Think, Inspire cùng ViVer</h1>
+          <h1>Learn, Think, Inspire with ViVer</h1>
           <p class="hero-text">
             Nền tảng học tập công nghệ giúp học sinh, sinh viên phát triển AI,
             kỹ năng số, thuyết trình, tư duy sáng tạo và năng lực nghề nghiệp tương lai.
@@ -97,53 +97,86 @@
         </div>
       </div>
     </section>
-   <section class="section alt auth-modal" id="authModal">
+   <section class="auth-modal" id="authModal">
   <div class="auth-overlay"></div>
-  <div class="auth-popup">
-    <button class="close-auth" onclick="closeAuthModal()">×</button>
 
-    <div id="account">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Account</p>
-          <h2>Tài khoản người dùng</h2>
-          <p>Đăng ký, đăng nhập, quên mật khẩu và lưu tài khoản thật vào database JSON.</p>
-        </div>
+  <div class="auth-popup-small">
+    <button class="close-auth" type="button" onclick="closeAuthModal()">×</button>
 
-        <div id="message" class="message hidden"></div>
+    <div class="auth-brand">
+      <div class="logo-mark">V</div>
+      <h2>ViVer</h2>
+      <p>Learn • Think • Inspire</p>
+    </div>
 
-        <div class="auth-grid">
-          <form class="panel auth-card" id="registerForm">
-            <h3>Đăng ký</h3>
-            <input name="fullname" placeholder="Họ tên" required>
-            <input name="email" type="email" placeholder="Email" required>
-            <input name="phone" placeholder="Số điện thoại">
-            <input name="password" type="password" placeholder="Mật khẩu" required>
-            <input name="confirmPassword" type="password" placeholder="Xác nhận mật khẩu" required>
-            <button class="btn primary full" type="submit">Tạo tài khoản</button>
-          </form>
+    <div class="auth-tabs">
+      <button class="auth-tab active" type="button" data-auth-tab="loginForm">
+        Đăng nhập
+      </button>
 
-          <form class="panel auth-card" id="loginForm">
-            <h3>Đăng nhập</h3>
-            <input name="email" type="email" placeholder="Email" required>
-            <input name="password" type="password" placeholder="Mật khẩu" required>
-            <button class="btn primary full" type="submit">Đăng nhập</button>
-            <button class="btn outline full" type="button" onclick="showMessage('Google Login đang ở chế độ demo.')">Google Login</button>
-            <button class="btn outline full" type="button" onclick="showMessage('Facebook Login đang ở chế độ demo.')">Facebook Login</button>
-          </form>
+      <button class="auth-tab" type="button" data-auth-tab="registerForm">
+        Đăng ký
+      </button>
 
-          <div class="panel auth-card">
-            <h3>Quên mật khẩu</h3>
-            <input id="forgotEmail" type="email" placeholder="Nhập email">
-            <button class="btn primary full" onclick="sendForgotOtp()">Gửi OTP</button>
-            <input id="resetOtp" placeholder="Nhập OTP">
-            <input id="newPassword" type="password" placeholder="Mật khẩu mới">
-            <button class="btn purple full" onclick="resetPassword()">Đặt lại mật khẩu</button>
-            <p id="forgotMsg" class="hint"></p>
-          </div>
-        </div>
-      </div>
-    </section>
+      <button class="auth-tab" type="button" data-auth-tab="forgotPanel">
+        Quên mật khẩu
+      </button>
+    </div>
+
+    <div id="message" class="message hidden"></div>
+
+    <form class="auth-panel active" id="loginForm">
+      <input name="email" type="email" placeholder="Email" required>
+      <input name="password" type="password" placeholder="Mật khẩu" required>
+
+      <button class="btn primary full" type="submit">
+        Đăng nhập
+      </button>
+
+      <button class="btn outline full" type="button">
+        Google Login
+      </button>
+
+      <button class="btn outline full" type="button">
+        Facebook Login
+      </button>
+
+      <p class="hint">Admin: admin@viver.vn / 123456</p>
+    </form>
+
+    <form class="auth-panel" id="registerForm">
+      <input name="fullname" placeholder="Họ tên" required>
+      <input name="email" type="email" placeholder="Email" required>
+      <input name="phone" placeholder="Số điện thoại">
+      <input name="password" type="password" placeholder="Mật khẩu" required>
+      <input
+        name="confirmPassword"
+        type="password"
+        placeholder="Xác nhận mật khẩu"
+        required
+      >
+
+      <button class="btn primary full" type="submit">
+        Tạo tài khoản
+      </button>
+    </form>
+
+    <div class="auth-panel" id="forgotPanel">
+      <input id="forgotEmail" type="email" placeholder="Nhập email">
+
+      <button class="btn primary full" type="button" onclick="sendForgotOtp()">
+        Gửi OTP
+      </button>
+      <input id="resetOtp" placeholder="Nhập OTP">
+      <input id="newPassword" type="password" placeholder="Mật khẩu mới">
+
+      <button class="btn purple full" type="button" onclick="resetPassword()">
+        Đặt lại mật khẩu
+      </button>
+      <p id="forgotMsg" class="hint"></p>
+    </div>
+  </div>
+</section>
     <section class="section" id="profile">
       <div class="container">
         <div class="section-head">
